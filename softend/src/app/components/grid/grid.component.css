@@ -1,0 +1,97 @@
+/* grid.component.css */
+
+.main-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.header {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.controls {
+  flex: 0 0 250px; /* Ne grandit pas, ne rétrécit pas, base de 250px */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.forest-grid-wrapper {
+  flex-grow: 1;
+  border: 2px solid #ccc;
+}
+
+mat-grid-tile {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.tree {
+  background-color: #2e7d32;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(0,0,0,0.1)"><path d="M12 2L2 22h20L12 2zm0 4.24L17.76 20H6.24L12 6.24z"/></svg>');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fire {
+  background-color: #d32f2f;
+  animation: fire-pulse 0.7s infinite alternate;
+}
+
+.ash {
+  background-color: #616161;
+}
+
+@keyframes fire-pulse {
+  from {
+    background-color: #ef5350;
+    transform: scale(1.05);
+  }
+  to {
+    background-color: #c62828;
+    transform: scale(1);
+  }
+}
+
+.settings-card {
+  margin: auto;
+  width: 50%;
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #fafafa;
+  margin-top: 20px;
+  max-width: 400px;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.setting-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.setting-item label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.settings-card button {
+  width: 100%;
+}
