@@ -17,6 +17,15 @@ The simulation ends when there are no more burning cells.
 
 The grid size, initial burning cells, and fire propagation probability are configurable and stored in a JSON configuration file.
 
+## Run
+- **Frontend:**  
+  cd frontend
+  npm install
+  ng serve
+- **Backend:**
+  mvn clean install
+  mvn spring-boot:run
+
 ## Technical Stack
 
 - **Backend:** Spring Boot (Java)  
